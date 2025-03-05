@@ -44,3 +44,11 @@ Take the existing Express API for coffee and create basic swagger docuementation
     - Relevant documentation on [responses](https://swagger-autogen.github.io/docs/swagger-2/responses) 
     - **NOTE**: We do not use schema definitions yet, do it manually for now (example 3 in the docs for responses). Keep in mind that this endpoint returns an array of coffees
 
+## Activity 2
+
+- Create swagger documentation for the "get by id" and post endpoints
+- Use [definitions](https://swagger-autogen.github.io/docs/swagger-2/schemas-and-definitions) to create models in `swagger.js`
+    - `Coffee`, `CoffeeArray`, `AddCoffee` (with required parameters), and `FailMessage` (for our non-2xx responses)
+- Use those definitions to in the endpoints to tell swagger which schema to use, [Example 2](https://swagger-autogen.github.io/docs/swagger-2/responses)
+- Take care to create repsonses for all states (`400`, `404`, `200`, and `201`) with appropriate schemas
+- Create [parameter](https://swagger-autogen.github.io/docs/swagger-2/parameters) comments for the ID path variable in "get by id" and the request body in the post endpoint

@@ -19,7 +19,9 @@ const doc = {
             name: 'dev',
             description: 'This version of the document is for development purposes'
         }
-    ]
+    ],
+    // Include definitions for all the models you need to use
+    // https://swagger-autogen.github.io/docs/swagger-2/schemas-and-definitions 
 }
 
 const outputFile = 'swagger-output.json'
