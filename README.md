@@ -28,7 +28,7 @@ Swagger in Express.js
 
 You can find a example from Swagger [here](https://petstore.swagger.io/)
 
-## Activity 1
+## Activity 1 (completed)
 
 Take the existing Express API for coffee and create basic swagger docuementation for it. This entails the following:
 
@@ -42,5 +42,5 @@ Take the existing Express API for coffee and create basic swagger docuementation
 - Add swagger autogen style comments (`// #swagger`) for the "get all coffees" endpoint (tag, description, responses).
     - Relevant documentation on [endpoints](https://swagger-autogen.github.io/docs/endpoints/)
     - Relevant documentation on [responses](https://swagger-autogen.github.io/docs/swagger-2/responses) 
-    - **NOTE**: We do not use schema definitions yet, do it manually for now (example 3 in the docs for responses). Keep in mind that this endpoint returns an array of coffees.
+    - **NOTE**: We do not use schema definitions yet, do it manually for now (example 3 in the docs for responses). Keep in mind that this endpoint returns an array of coffees
 

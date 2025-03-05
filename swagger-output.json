@@ -1,0 +1,67 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Coffee API",
+    "description": "Allows users get and create coffee orders"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "dev",
+      "description": "This version of the document is for development purposes"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/coffees/": {
+      "get": {
+        "tags": [
+          "Coffee"
+        ],
+        "description": "Gets all coffees",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "Coffee name"
+                  },
+                  "details": {
+                    "type": "string",
+                    "example": "Coffee details"
+                  },
+                  "price": {
+                    "type": "string",
+                    "example": "Coffe price"
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

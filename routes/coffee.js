@@ -9,7 +9,18 @@ const coffees = [
 ];
 
 // Activity 1: Document this endpoint
-router.get('/', (req,res) => {
+router.get('/', (req, res) => {
+    //  #swagger.tags = ['Coffee']
+    //  #swagger.description = 'Gets all coffees'
+    /*  #swagger.responses[200] = { 
+             description: 'Success', 
+             schema: [{ 
+                 id: 1,
+                 name: 'Coffee name',
+                 details: 'Coffee details',
+                 price: 'Coffe price'
+            }]
+    }*/
     res.status(200).json(coffees)
 })
 
