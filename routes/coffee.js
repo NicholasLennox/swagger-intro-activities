@@ -49,6 +49,8 @@ router.post('/', (req, res) => {
 
     const newId = Math.max(...coffees.map(c => c.id)) + 1
     const newCoffee = { id: newId, name, details, price }
+    coffees.push(newCoffee)
+    
     res.status(201).json(newCoffee)
 })
 
