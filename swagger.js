@@ -22,10 +22,29 @@ const doc = {
     ],
     // Include definitions for all the models you need to use
     // https://swagger-autogen.github.io/docs/swagger-2/schemas-and-definitions 
+    definitions: {
+        Coffee: {
+            id: 1,
+            name: 'Example coffee',
+            details: 'Example details',
+            price: 5.99
+        },
+        CoffeeArray: [{
+            $ref: '#/definitions/Coffee'
+        }],
+        AddCoffee: {
+            $name: 'Example coffee',
+            $details: 'Example details',
+            $price: 5.99
+        },
+        FailMessage: {
+            message: 'Failure message'
+        }
+    }
 }
 
 const outputFile = 'swagger-output.json'
 const endpointFiles = ['./app.js']
 
 // Generates swagger JSDoc for swagger UI to read
-swaggerAutogen(outputFile,endpointFiles,doc)
+swaggerAutogen(outputFile, endpointFiles, doc)

@@ -14,12 +14,9 @@ router.get('/', (req, res) => {
     //  #swagger.description = 'Gets all coffees'
     /*  #swagger.responses[200] = { 
              description: 'Success', 
-             schema: [{ 
-                 id: 1,
-                 name: 'Coffee name',
-                 details: 'Coffee details',
-                 price: 'Coffe price'
-            }]
+             schema: {
+                $ref: '#/definitions/CoffeeArray'
+             }
     }*/
     res.status(200).json(coffees)
 })

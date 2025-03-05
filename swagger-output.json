@@ -33,31 +33,7 @@
           "200": {
             "description": "Success",
             "schema": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number",
-                    "example": 1
-                  },
-                  "name": {
-                    "type": "string",
-                    "example": "Coffee name"
-                  },
-                  "details": {
-                    "type": "string",
-                    "example": "Coffee details"
-                  },
-                  "price": {
-                    "type": "string",
-                    "example": "Coffe price"
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
+              "$ref": "#/definitions/CoffeeArray"
             }
           }
         }
@@ -115,6 +91,66 @@
           "404": {
             "description": "Not Found"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Coffee": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "example": 1
+        },
+        "name": {
+          "type": "string",
+          "example": "Example coffee"
+        },
+        "details": {
+          "type": "string",
+          "example": "Example details"
+        },
+        "price": {
+          "type": "number",
+          "example": 5.99
+        }
+      }
+    },
+    "CoffeeArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Coffee"
+      }
+    },
+    "AddCoffee": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Example coffee"
+        },
+        "details": {
+          "type": "string",
+          "example": "Example details"
+        },
+        "price": {
+          "type": "number",
+          "example": 5.99
+        }
+      },
+      "required": [
+        "name",
+        "details",
+        "price"
+      ]
+    },
+    "FailMessage": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "Failure message"
         }
       }
     }
