@@ -55,4 +55,13 @@ Take the existing Express API for coffee and create basic swagger docuementation
 
 ## Reflection
 
-- 
+- **Question**: What are the biggest advantages and disadvantages of using Swagger?
+    - Think about development speed, collaboration, and maintenance.
+    - Can Swagger ever be a burden instead of a benefit?
+- **Question**: How does Swagger improve communication between frontend and backend developers?
+    - Can it prevent misunderstandings?
+    - Could it ever cause frustration?
+- **Question**: Based on what we've seen today, would you want to use Swagger in a real project?
+    - What would make Swagger a must-have for your team?
+    - What would make you avoid it?
+    - If you were to introduce Swagger into a team, how would you ensure it's used correctly?
