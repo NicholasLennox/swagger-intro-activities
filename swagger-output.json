@@ -39,57 +39,69 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Coffee"
+        ],
+        "description": "Create a new coffee resource",
         "parameters": [
           {
             "name": "body",
             "in": "body",
+            "description": "Add a coffee",
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "details": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/definitions/AddCoffee"
             }
           }
         ],
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Coffee created successfully",
+            "schema": {
+              "$ref": "#/definitions/Coffee"
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Invalid payload",
+            "schema": {
+              "$ref": "#/definitions/FailMessage"
+            }
           }
         }
       }
     },
     "/api/v1/coffees/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Coffee"
+        ],
+        "description": "Get coffee by ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "integer",
+            "description": "ID of coffee"
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Coffee resource matching ID",
+            "schema": {
+              "$ref": "#/definitions/Coffee"
+            }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Invalid ID",
+            "schema": {
+              "$ref": "#/definitions/FailMessage"
+            }
           },
           "404": {
-            "description": "Not Found"
+            "description": "Coffee couldnt be found with that ID",
+            "schema": {
+              "$ref": "#/definitions/FailMessage"
+            }
           }
         }
       }

@@ -33,6 +33,7 @@ const doc = {
             $ref: '#/definitions/Coffee'
         }],
         AddCoffee: {
+            // $ means required (it adds a red * in the docs)
             $name: 'Example coffee',
             $details: 'Example details',
             $price: 5.99
